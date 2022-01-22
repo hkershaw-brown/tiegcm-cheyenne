@@ -55,9 +55,9 @@ cat << EOF >! $runscript
 #PBS -k eod
 #PBS -q regular
 #PBS -l walltime=00:20:00
-#PBS -l select=1:ncpus=36:mpiprocs=36
+#PBS -l select=1:ncpus=1::mpiprocs=1
 
-setenv TMPDIR=/glade/scratch/$USER/temp
+setenv TMPDIR /glade/scratch/$USER/temp
 mkdir -p $TMPDIR
 #
 EOF
@@ -272,7 +272,7 @@ if ($mpi == "TRUE") then  # MPI LSF job
 EOF
   echo " "
   echo "Submitting LSF script $runscript for MPI run"
-#  bsub < $runscript
+  qsub $runscript
 #
 # Non-mpi job: simple execution statement on the interactive node.
 # If you want to submit lsf job, you can use a here-doc like above
