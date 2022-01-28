@@ -26,18 +26,18 @@
 # and change execdir, tgcmdata and namelist input as necessary.
 # Also reset number of processors accordingly below (#BSUB -n).
 #
-set modeldir = tiegcm2.0
-set execdir  = tiegcm.exec
-set tgcmdata = tiegcm_res5.0_data
-set input    = tiegcm_res5.0.inp
-set output   = tiegcm_res5.0.out
 set modelres = 5.0
+set modeldir = tiegcm2.0
+set execdir  = tiegcm.exec${modelres}
+set tgcmdata = /glade/scratch/hkershaw/DART/TIEGCM/DATA/tiegcm_res${modelres}_data
+set input    = tiegcm_res${modelres}.inp
+set output   = tiegcm_res${modelres}.out
 set make     = Make.intel_ch
 set mpi       = TRUE   # (must be TRUE for tiegcm2.0 or later)
 set debug     = FALSE
 set exec      = TRUE
 set utildir   = $modeldir/scripts
-set runscript = run.pbs
+set runscript = run${modelres}.pbs
 
 set execdir   = `perl $utildir/abspath $execdir`
 set runscript = `perl $utildir/abspath $runscript`
