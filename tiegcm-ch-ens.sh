@@ -5,7 +5,7 @@
 # Set shell variables and #PBS settings below:
 #
 #   modeldir:  Root directory to model source (may be an SVN working dir)
-#   execdir:   Directory in which to build and execute (will be created if necessary)
+#   builddir:   Directory in which to build and execute (will be created if necessary)
 #   tgcmdata:  Directory in which startup history and data files are accessed.
 #              (If tgcmdata is not set, the model will use env var TGCMDATA)
 #   input:     Namelist input file for the chosen model resolution
@@ -16,18 +16,19 @@
 #   debug:     If TRUE, build and execute a "debug" run (debug compiler flags are set)
 #   exec:      If TRUE, execute the model (build only if exec is FALSE)
 #   utildir:   Directory containing supporting scripts (default $modeldir/scripts)
-#   runscript: LSF script with run commands (submitted with bsub from execdir)
+#   runscript: LSF script with run commands (submitted with bsub from builddir)
 #
 # To switch to 2.5-deg resolution, set modelres below to 2.5, 
-# and change execdir, tgcmdata and namelist input as necessary.
+# and change builddir, tgcmdata and namelist input as necessary.
 # Also reset number of processors accordingly below (#BSUB -n).
 #
 
 set -e
 
+ens_size=12
 modelres=2.5
 modeldir=tiegcm2.0
-execdir=tiegcm.exec${modelres}
+builddir=tiegcm.exec${modelres}
 tgcmdata=/glade/scratch/hkershaw/DART/TIEGCM/DATA/tiegcm_res${modelres}_data
 input=tiegcm_res${modelres}.inp
 output=tiegcm_res${modelres}.out
@@ -37,18 +38,19 @@ debug=FALSE
 utildir=$modeldir/scripts
 runscript=run${modelres}.pbs
 
-execdir=$(perl $utildir/abspath $execdir)
+builddir=$(perl $utildir/abspath $builddir)
 runscript=$(perl $utildir/abspath $runscript)
 
-[ ! -d $execdir ] && mkdir -p $execdir
+[ ! -d $builddir ] && mkdir -p $builddir
 #
-# Set LSF resource usage (create the runscript in execdir):
+# Set LSF resource usage (create the runscript in builddir):
 # (run commands are appended to this script below)
 #
 cat << EOF > $runscript
 #!/bin/bash
 #
 #PBS -A P86850054
+#PBS -J 1-$ens_size
 #PBS -N tiegcm2.0
 #PBS -j oe
 #PBS -k eod
@@ -67,6 +69,9 @@ EOF
 #                        Shell Script for TIEGCM Linux job
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
+#-------------------------
+# Build TIEGCM 2.0
+#-------------------------
 # ESMF module Cheyenne note double load
 module load intel/19.0.2
 module load mpt/2.21
@@ -80,8 +85,8 @@ echo "  Current working directory: $mycwd"
 echo "  System: `uname -a`"  
 echo ""
 #
-# Verify directories and make_machine file (make execdir if necessary).
-# Get absolute path for dirs that are accessed from the execdir.
+# Verify directories and make_machine file (make builddir if necessary).
+# Get absolute path for dirs that are accessed from the builddir.
 #
 [ ! -d $modeldir ] && echo ">>> Cannot find model directory $modeldir <<<" && exit 1
 
@@ -108,17 +113,17 @@ then
 fi
 
 #
-# Copy make files to execdir if necessary:
+# Copy make files to builddir if necessary:
 #
-[ ! -f $execdir/$make ] && cp $utildir/$make $execdir
-[ ! -f $execdir/Makefile ] && $utildir/Makefile $execdir
-[ ! -f $execdir/mkdepends ] && $utildir/mkdepends $execdir
+[ ! -f $builddir/$make ] && cp $utildir/$make $builddir
+[ ! -f $builddir/Makefile ] && $utildir/Makefile $builddir
+[ ! -f $builddir/mkdepends ] && $utildir/mkdepends $builddir
 #
 # Make default namelist input file if not provided by user:
 #
 [ ! -f $input ] && echo ">>> Cannot find namelist input file $input <<<" && exit 1
 
-model=$execdir/$model
+model=$builddir/$model
 input=$(perl $utildir/abspath $input)
 output=$(perl $utildir/abspath $output)
 util=$(perl $utildir/abspath $utildir)
@@ -131,7 +136,7 @@ rmbinchars=$util/rmbinchars # Nov, 2015: remove non-ascii chars from stdout file
  set svn_revision = 'tiegcm2.0' # for svn tag instead of revision number
 
 echo -n "  Model directory:   $modeldir" && echo " (SVN revision $svn_revision)"
-echo "  Exec directory:    $execdir"
+echo "  Exec directory:    $builddir"
 echo "  Source directory:  $srcdir"
 echo "  Data directory:    $tgcmdata"
 echo "  Make machine file: $make"
@@ -142,66 +147,66 @@ echo "  Debug:             $debug"
 echo "  MPI job:           $mpi"
 
 #
-# If debug flag has changed from last gmake, clean execdir
+# If debug flag has changed from last gmake, clean builddir
 # and reset debug file:
 #
-if [ -f $execdir/debug ] 
+if [ -f $builddir/debug ] 
 then
-  lastdebug=$(cat $execdir/debug) 
+  lastdebug=$(cat $builddir/debug) 
   if [ $lastdebug != $debug ] 
   then
-    echo "Clean execdir $execdir because debug flag switched from $lastdebug to $debug"
-    mycwd=$(pwd) ; cd $execdir ; gmake clean ; cd $mycwd
-    echo $debug > $execdir/debug
+    echo "Clean builddir $builddir because debug flag switched from $lastdebug to $debug"
+    mycwd=$(pwd) ; cd $builddir ; gmake clean ; cd $mycwd
+    echo $debug > $builddir/debug
   fi
 else
-  echo $debug > $execdir/debug
+  echo $debug > $builddir/debug
   echo "Created file debug with debug flag = $debug"
 fi
 #
-# If mpi flag has changed from last gmake, clean execdir
+# If mpi flag has changed from last gmake, clean builddir
 # and reset mpi file:
 #
-if [ -f $execdir/mpi ] 
+if [ -f $builddir/mpi ] 
 then
-  lastmpi=$(cat $execdir/mpi) 
+  lastmpi=$(cat $builddir/mpi) 
   if [ $lastmpi != $mpi ] 
   then
-    echo "Clean execdir $execdir because mpi flag switched from $lastmpi to $mpi"
-    mycwd $(pwd) ; cd $execdir ; gmake clean ; cd $mycwd
-    echo $mpi > $execdir/mpi
+    echo "Clean builddir $builddir because mpi flag switched from $lastmpi to $mpi"
+    mycwd $(pwd) ; cd $builddir ; gmake clean ; cd $mycwd
+    echo $mpi > $builddir/mpi
   fi
 else
-  echo $mpi > $execdir/mpi
+  echo $mpi > $builddir/mpi
   echo "Created file mpi with mpi flag = $mpi"
 fi
 #
-# Copy defs header file to execdir, if necessary, according to 
+# Copy defs header file to builddir, if necessary, according to 
 # requested resolution. This should seamlessly switch between
 # resolutions according to $modelres.
 #
 defs=$srcdir/defs5.0
 [ $modelres == 2.5 ] && defs=$srcdir/defs2.5
-if [ -f $execdir/defs.h ]
+if [ -f $builddir/defs.h ]
 then
-  cmp -s $execdir/defs.h $defs
+  cmp -s $builddir/defs.h $defs
   if [ $? == 1 ] 
   then # files differ -> switch resolutions
     echo "Switching defs.h for model resolution $modelres"
-    cp $defs $execdir/defs.h
+    cp $defs $builddir/defs.h
   else
     echo "defs.h already set for model resolution $modelres"
   fi 
-else # defs.h does not exist in execdir -> copy appropriate defs file
-  echo "Copying $defs to $execdir/defs.h for resolution $modelres"
-  cp $defs $execdir/defs.h
+else # defs.h does not exist in builddir -> copy appropriate defs file
+  echo "Copying $defs to $builddir/defs.h for resolution $modelres"
+  cp $defs $builddir/defs.h
 fi
 
 #
-# cd to execdir and run make:
+# cd to builddir and run make:
 #
-echo $execdir
-cd $execdir 
+echo $builddir
+cd $builddir 
 echo ""
 echo "Begin building $model in $(pwd)"
 #
@@ -220,22 +225,38 @@ EOF
 #
 # Build the model:
 gmake -j8 all 
+
+
+#-------------------------
+# Setup ensemble
+#------------------------
 #
-#
-# Set data directory in LSF script:
+# setup ens_size run directories
+cd -
+[ ! -d Assim ] && mkdir Assim
+cd Assim
+
+for (( i==1; i<=$ens_size; i++))
+do
+  mem="member"$(printf "%02d" $i)
+  mkdir $mem
+
+done
+
+
+# Set data directory in PBS script:
 #
 cat << EOF >> $runscript
   export TGCMDATA=$tgcmdata
 EOF
 #
-# MPI/LSF job: append mpirun.lsf command to LSF script 
-# (it has #BSUBs from above)
 #
 cat << EOF >> $runscript
 export MP_LABELIO=YES
 export MP_SHARED_MEMORY=yes
 #
 # Execute:
+  cd Assim/\$$PBS_ARRAY_INDEX
   mpiexec_mpt $model $input &> $output
 #
 # Save stdout:
