@@ -1,0 +1,283 @@
+&filter_nml
+   single_file_in               = .false.,
+   input_state_files            = '',
+   input_state_file_list        = 'tiegcm_init_files',
+   init_time_days               = -1
+   init_time_seconds            = -1
+   perturb_from_single_instance = .false.,
+   perturbation_amplitude       = 0.2,
+
+   stages_to_write              = 'FORECAST','PREASSIM','OUTPUT'
+
+   single_file_out              = .false.,
+   output_state_files           = '',
+   output_state_file_list       = 'tiegcm_init_files',
+   output_interval              = 1,
+   output_members               = .true.,
+   num_output_state_members     = 0,
+   output_mean                  = .true.,
+   output_sd                    = .true.,
+   write_all_stages_at_end      = .false.,
+   compute_posterior            = .false.
+
+   ens_size                     = 5,
+   num_groups                   = 1,
+   distributed_state            = .true.,
+
+   obs_sequence_in_name         = "obs_seq.out.1",
+   obs_sequence_out_name        = "obs_seq.final",
+   num_output_obs_members       = 0,
+   first_obs_days               = 152468,
+   first_obs_seconds            = 25201,
+   last_obs_days                = 152468,
+   last_obs_seconds             = 26400,
+   obs_window_days              = -1,
+   obs_window_seconds           = -1,
+
+   inf_flavor                   = 5,                       0,
+   inf_initial_from_restart     = .false.,                 .false.,
+   inf_sd_initial_from_restart  = .false.,                 .false.,
+   inf_deterministic            = .true.,                  .true.,
+   inf_initial                  = 1.0,                     1.0,
+   inf_lower_bound              = 0.0,                     0.0,
+   inf_upper_bound              = 100.0,                   100.0,
+   inf_damping                  = 0.9                      0.9,
+   inf_sd_initial               = 0.6,                     0.6,
+   inf_sd_lower_bound           = 0.6,                     0.6,
+   inf_sd_max_change            = 1.05,                    1.05,
+
+   trace_execution              = .true.,
+   output_timestamps            = .true.,
+   output_forward_op_errors     = .false.,
+   write_obs_every_cycle        = .false.,
+   allow_missing_clm            = .false.,
+   silence                      = .false.,
+   /
+
+! Moha's enhanced (gamma distribution) adaptive:
+!    inf_flavor                  = 5,                       0
+!    inf_lower_bound             = 0.0,                     0.0
+! flavor 2
+!    inf_flavor                  = 2,                       0
+!    inf_lower_bound             = 1.0,                     1.0
+! 
+! *** stages_to_write ***
+! Controls which stages to write. Case-insensitive input. Currently there are six options:
+!     input – writes input mean and sd only
+!     forecast – before assimilation, before prior inflation is applied
+!     preassim – before assimilation, after prior inflation is applied
+!     postassim – after assimilation, before posterior inflation is applied
+!     analysis – after assimilation, after posterior inflation is applied
+!     output – final output from filter which includes clamping and inflation
+! stages_to_write
+!     If only prior inflation is used, then 'postassim' and 'analysis'
+!     are redundant with 'output'.  Just use 'output'.
+!     If only posterior inflation is used, 'forecast' and 'preassim'
+!     are redundant with 'input'.
+!     If you want input_mean and input_sd, you'll need to set output_mean and output_sd = .true.
+!     (and include 'input' in stages_to_write).
+!     output_mean and output_sd = .true. means output the ensemble mean standard deviation (spread) in any stage
+!     that is enabled.
+
+&quality_control_nml
+   input_qc_threshold          =  3.0
+   outlier_threshold           =  -1
+   enable_special_outlier_code = .false.
+   /
+
+! #========================================================================
+! # Notes on TIE-GCM dependencies and general discussion. 
+! #========================================================================
+! Some of the following is directly copied from cam-fv and modified for tie-gcm. experimental. 
+! Update the text as you go; with what's relevant, what (not)works, etc.
+!
+! state_variables (5 columns for each variable):
+!   netcdf varname, dart quantity, min allowed value, max allowed value, (no)update this var
+!
+! assimilation_period_days + assimilation_period_seconds:
+!   Set the desired minimum model advance time. This is generally NOT the dynamical timestep 
+!   of the model, but rather the shortest forecast length you are willing to make.
+!   This impacts how frequently the observations may be assimilated.
+!
+! no_normalization_of_scale_heights:
+!   set this to false (with vertical_localization_coord = 'HEIGHT')
+!
+! suppress_grid_info_in_output:
+!   This option is for users who want the smallest output or diagnostic files.
+!   only the state vector data will be written.   otherwise, if you want to plot this data
+!   the rest of this routine writes out enough grid info to make the output file look like the input.
+!
+! custom_routine_to_generate_ensemble 
+!   Creation of initial ensemble from a single model state. (I haven't test this piece of code.)
+!   fields_to_perturb lists the DART QTY_s of the state variables to be perturbed to make the ensemble.
+!   perturbation_amplitude > 0 allows each point of the fields_to_perturb fields of each ens member 
+!   to be randomly perturbed with a standard deviation of perturbation_amplitude.  
+!   Each field can be given a different perturbation_amplitude.
+!   Used by filter's call to pert_model_copies. e.g., !custom_routine_to_generate_ensemble = .true.
+!   !fields_to_perturb = 'QTY_TEMPERATURE', !perturbation_amplitude = 0.01
+
+&model_nml
+   tiegcm_restart_file_name       = 'tiegcm_restart_p.nc'
+   vertical_localization_coord    = 'HEIGHT'
+   state_variables  = 'TN',  'QTY_TEMPERATURE',                'NA', 'NA', 'UPDATE'
+                      'O1',  'QTY_ATOMIC_OXYGEN_MIXING_RATIO', 'NA', 'NA', 'UPDATE'
+                      'Z',   'QTY_GEOPOTENTIAL_HEIGHT',        'NA', 'NA', 'UPDATE'
+                      'NE',  'QTY_ELECTRON_DENSITY',           'NA', 'NA', 'UPDATE'
+   assimilation_period_days       = 0
+   assimilation_period_seconds    = 600
+   no_normalization_of_scale_heights   = .false.
+
+   no_obs_assim_above_level            = -1
+   model_damping_ends_at_level         = -1
+
+   debug_level                    = 101
+   suppress_grid_info_in_output   = .false.
+   /
+
+&model_mod_check_nml
+   num_ens               = 1
+   input_state_files     = 'tiegcm_restart_p.nc.0001', 'tiegcm_restart_p.nc.0021', 'tiegcm_restart_p.nc.0088'
+   output_state_files    = 'mmc_output1.nc', 'mmc_output21.nc', 'mmc_output88.nc'
+
+   test1thru             = 5
+   run_tests             = -1
+
+   x_ind                 = 1000
+   quantity_of_interest  = 'QTY_TEMPERATURE_ELECTRON'
+   loc_of_interest       = 160.0, 1.25, 5.0
+
+   interp_test_lonrange  = 144.0, 326.0
+   interp_test_dlon      = 2.5
+   interp_test_latrange  = -5.0, 80.0
+   interp_test_dlat      = 2.5
+   interp_test_vertrange = 1.0,  57.0
+   interp_test_dvert     = 1.0
+   interp_test_vertcoord = 'VERTISLEVEL'
+   verbose               = .true.
+   /
+! quantity_of_interest: Lon,Lat(deg),Vert(meters/level)
+! num_ens: Provided for future use. Must be 1. 
+! Ultimately, The number of ensemble members you would like to read in for testing.
+
+! #========================================================================
+! # End of TIE-GCM dependencies.
+! #========================================================================
+
+&assim_tools_nml
+   filter_kind                       = 1
+   cutoff                            = 0.15
+   distribute_mean                   = .true.
+   sort_obs_inc                      = .false.
+   spread_restoration                = .false.
+   sampling_error_correction         = .false.
+   adaptive_localization_threshold   = -1
+   output_localization_diagnostics   = .false.
+   localization_diagnostics_file     = 'localization_diagnostics'
+   convert_all_state_verticals_first = .false.
+   convert_all_obs_verticals_first   = .true.
+   print_every_nth_obs               = 0
+   /
+
+! distribute_mean:
+!   If your model uses coordinates that have no options for different vertical coordinates then this setting has no
+!   effect on speed and should be .true. to use less memory.
+
+&location_nml
+   horiz_dist_only                 = .false.
+   vert_normalization_height       = 100000.0
+   approximate_distance            = .true.
+   nlon                            = 141
+   nlat                            = 72
+   output_box_info                 = .false.
+   print_box_level                 = 0
+   /
+
+! Horizontal localization: 2*cutoff*6371 [km]
+! vert_normalization_height: The number of meters equivalent to a horiz distance of 1 radian.
+! Vertical localization: 2*vert_normalization_height*cutoff [meters]
+
+&cov_cutoff_nml
+   select_localization = 1
+   /
+
+! select_localization: 1=Gaspari-Cohn; 2=Boxcar; 3=Ramped Boxcar
+
+&preprocess_nml
+   overwrite_output        = .true.
+   input_obs_qty_mod_file  = '../../../assimilation_code/modules/observations/DEFAULT_obs_kind_mod.F90'
+   output_obs_qty_mod_file = '../../../assimilation_code/modules/observations/obs_kind_mod.f90'
+   input_obs_def_mod_file  = '../../../observations/forward_operators/DEFAULT_obs_def_mod.F90'
+   output_obs_def_mod_file = '../../../observations/forward_operators/obs_def_mod.f90'
+   obs_type_files          = '../../../observations/forward_operators/obs_def_upper_atm_mod.f90'
+   quantity_files          = '../../../assimilation_code/modules/observations/atmosphere_quantities_mod.f90',
+                             '../../../assimilation_code/modules/observations/space_quantities_mod.f90',
+                             '../../../assimilation_code/modules/observations/chemistry_quantities_mod.f90'
+   /
+
+&obs_kind_nml
+   evaluate_these_obs_types   = ''
+   /
+   !assimilate_these_obs_types = 'SAT_ELECTRON_DENSITY'
+
+&state_vector_io_nml
+   buffer_state_io         = .false.
+   single_precision_output = .false.
+   /
+
+&ensemble_manager_nml
+   layout         = 1
+   tasks_per_node = 1
+   communication_configuration = 1
+   /
+
+&reg_factor_nml
+   select_regression    = 1
+   save_reg_diagnostics = .false.
+   /
+
+&obs_sequence_nml
+   write_binary_obs_sequence = .false.
+   /
+
+&utilities_nml
+   TERMLEVEL      = 2
+   logfilename    = 'dart_log.out'
+   nmlfilename    = 'dart_log.nml'
+   module_details = .false.
+   print_debug    = .false.
+   write_nml      = 'none'
+   /
+
+! Namelist entry &quad_interpolate_nml must exist in file input.nml
+&quad_interpolate_nml
+   debug = 0
+   /
+
+! #========================================================================
+! # Observation manipulation tools.
+! #========================================================================
+
+&obs_sequence_tool_nml
+   filename_seq      = ''
+   filename_seq_list = 'obs_seq_list'
+   filename_out      = 'obs_seq_EiscatNeTeTi_2018_163_165'
+   print_only        = .false.
+   gregorian_cal     = .true.
+   first_obs_days    = 152468
+   first_obs_seconds = 25200
+   last_obs_days     = -1
+   last_obs_seconds  = -1
+   /
+
+&smoother_nml
+   num_lags              = 0
+   start_from_restart    = .false.
+   output_restart        = .false.
+   restart_in_file_name  = 'smoother_ics'
+   restart_out_file_name = 'smoother_restart'
+   /
+
+! #========================================================================
+! # Diagnostic tools.
+! #========================================================================
+

@@ -1,0 +1,223 @@
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  2 18 13 29 16
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output No echo of NML values
+ PE 0: initialize_mpi_utilities:  Running with           36  MPI processes.
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+ variable name p0  5.000000000000000E-007
+  
+ Reporting on domain #            1
+ Created by method "file"
+ Origin file "tiegcm_restart_p.nc"
+ Number of dimensions  :  5
+ unlimdimid            :  1
+     1: dim_id = 1, length =        2, name = "time"
+     2: dim_id = 2, length =      144, name = "lon"
+     3: dim_id = 3, length =       72, name = "lat"
+     4: dim_id = 4, length =       57, name = "lev"
+     5: dim_id = 5, length =       57, name = "ilev"
+ 
+ VARNAME     : TN
+ var_size    :       590976
+ index_start :                      1
+ index_end   :                 590976
+ quantity    : QTY_TEMPERATURE                
+ qty_index   :   5
+ clamping    :  F
+ minvalue    :   -888888.000000000     
+ maxvalue    :   -888888.000000000     
+ update      :  T
+ unlimdimid  :            1
+ numdims     : 3
+     1:             length =      144, name = "lon"
+     2:             length =       72, name = "lat"
+     3:             length =       57, name = "lev"
+ io_numdims  : 4
+     1: dim_id = 2, length =      144, name = "lon"
+     2: dim_id = 3, length =       72, name = "lat"
+     3: dim_id = 4, length =       57, name = "lev"
+     4: dim_id = 1, length =        2, name = "time"
+ units             : K
+ short_name        : 
+ long_name         : NEUTRAL TEMPERATURE
+ has_missing_value :  T
+ has_FillValue     :  F
+ xtype             : NF90_DOUBLE
+ missing_value     :   1.000000000000000E+036
+ 
+ VARNAME     : O1
+ var_size    :       590976
+ index_start :                 590977
+ index_end   :                1181952
+ quantity    : QTY_ATOMIC_OXYGEN_MIXING_RATIO 
+ qty_index   : 134
+ clamping    :  F
+ minvalue    :   -888888.000000000     
+ maxvalue    :   -888888.000000000     
+ update      :  T
+ unlimdimid  :            1
+ numdims     : 3
+     1:             length =      144, name = "lon"
+     2:             length =       72, name = "lat"
+     3:             length =       57, name = "lev"
+ io_numdims  : 4
+     1: dim_id = 2, length =      144, name = "lon"
+     2: dim_id = 3, length =       72, name = "lat"
+     3: dim_id = 4, length =       57, name = "lev"
+     4: dim_id = 1, length =        2, name = "time"
+ units             : mmr
+ short_name        : 
+ long_name         : ATOMIC OXYGEN
+ has_missing_value :  T
+ has_FillValue     :  F
+ xtype             : NF90_DOUBLE
+ missing_value     :   1.000000000000000E+036
+ 
+ VARNAME     : Z
+ var_size    :       590976
+ index_start :                1181953
+ index_end   :                1772928
+ quantity    : QTY_GEOPOTENTIAL_HEIGHT        
+ qty_index   :  23
+ clamping    :  F
+ minvalue    :   -888888.000000000     
+ maxvalue    :   -888888.000000000     
+ update      :  T
+ unlimdimid  :            1
+ numdims     : 3
+     1:             length =      144, name = "lon"
+     2:             length =       72, name = "lat"
+     3:             length =       57, name = "ilev"
+ io_numdims  : 4
+     1: dim_id = 2, length =      144, name = "lon"
+     2: dim_id = 3, length =       72, name = "lat"
+     3: dim_id = 5, length =       57, name = "ilev"
+     4: dim_id = 1, length =        2, name = "time"
+ units             : cm
+ short_name        : 
+ long_name         : GEOPOTENTIAL HEIGHT
+ has_missing_value :  T
+ has_FillValue     :  F
+ xtype             : NF90_DOUBLE
+ missing_value     :   1.000000000000000E+036
+ 
+ VARNAME     : NE
+ var_size    :       590976
+ index_start :                1772929
+ index_end   :                2363904
+ quantity    : QTY_ELECTRON_DENSITY           
+ qty_index   : 133
+ clamping    :  F
+ minvalue    :   -888888.000000000     
+ maxvalue    :   -888888.000000000     
+ update      :  T
+ unlimdimid  :            1
+ numdims     : 3
+     1:             length =      144, name = "lon"
+     2:             length =       72, name = "lat"
+     3:             length =       57, name = "ilev"
+ io_numdims  : 4
+     1: dim_id = 2, length =      144, name = "lon"
+     2: dim_id = 3, length =       72, name = "lat"
+     3: dim_id = 5, length =       57, name = "ilev"
+     4: dim_id = 1, length =        2, name = "time"
+ units             : cm-3
+ short_name        : 
+ long_name         : ELECTRON DENSITY
+ has_missing_value :  T
+ has_FillValue     :  F
+ xtype             : NF90_DOUBLE
+ missing_value     :   1.000000000000000E+036
+ 
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Including vertical separation when computing distances:
+ PE 0: location_mod:        # pascals ~ 1 horiz radian:      100000.00000
+ PE 0: location_mod:         # meters ~ 1 horiz radian:      100000.00000
+ PE 0: location_mod:   # model levels ~ 1 horiz radian:          20.00000
+ PE 0: location_mod:  # scale heights ~ 1 horiz radian:           5.00000
+ PE 0: location_mod: Using table-lookup approximation for distance computations
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.150000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .300000
+ PE 0: assim_tools_init: Distributing one copy of the ensemble mean across all t
+ asks
+ PE 0: assim_tools_init: ... uses less memory per task but may run slower if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Doing vertical localization, vertical coordinate conver
+ sion may be required
+ PE 0: assim_tools_init: ... Converting all state vector verticals only as neede
+ d.
+ PE 0: assim_tools_init: ... Converting all observation verticals to localizatio
+ n coordinate first.
+ PE 0:  filter trace: Filter start
+ Filter start TIME: 2022/02/18 13:29:16
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0:  filter trace: Before initializing inflation
+ PE 0: filter_main: Prior inflation damping of     0.900000 will be used
+ PE 0:  filter trace: After  initializing inflation
+ PE 0: parse_stages_to_write:  filter will write stage : FORECAST
+ PE 0: parse_stages_to_write:  filter will write stage : PREASSIM
+ PE 0: parse_stages_to_write:  filter will write stage : OUTPUT
+ PE 0:  filter trace: Before setting up space for observations
+ Before setting up space for observations TIME: 2022/02/18 13:29:16
+ After  setting up space for observations TIME: 2022/02/18 13:29:16
+ PE 0:  filter trace: After  setting up space for observations
+ PE 0:  filter trace: Before setting up space for ensembles
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0:  filter trace: After  setting up space for ensembles
+ PE 0: filter_main: skipping computation of posterior forward operators
+ PE 0:  filter trace: Before reading in ensemble restart files
+ Before reading in ensemble restart files TIME: 2022/02/18 13:29:16
+ PE 0: set_member_file_metadata no file list given for stage "forecast" so using
+  default names
+ PE 0: set_member_file_metadata no file list given for stage "preassim" so using
+  default names
+ PE 0: read_model_time  tiegcm [year, doy, hour, minute]        2002          81
+            0           0

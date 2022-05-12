@@ -1,0 +1,50 @@
+ obs_sequence
+obs_type_definitions
+           1
+          39 COSMIC_ELECTRON_DENSITY        
+  num_copies:           15  num_qc:            2
+  num_obs:            1  max_num_obs:            1
+observation                                                     
+prior ensemble mean                                             
+posterior ensemble mean                                         
+prior ensemble spread                                           
+posterior ensemble spread                                       
+prior ensemble member      1                                    
+posterior ensemble member      1                                
+prior ensemble member      2                                    
+posterior ensemble member      2                                
+prior ensemble member      3                                    
+posterior ensemble member      3                                
+prior ensemble member      4                                    
+posterior ensemble member      4                                
+prior ensemble member      5                                    
+posterior ensemble member      5                                
+Data QC                                                         
+DART quality control                                            
+  first:            1  last:            1
+ OBS            1
+   60047.8138943032     
+   1783.38338613322     
+   1783.38338613322     
+  3.300877763469292E-009
+  3.300877763469292E-009
+   1783.38338613152     
+   1783.38338613152     
+   1783.38338613133     
+   1783.38338613133     
+   1783.38338613901     
+   1783.38338613901     
+   1783.38338613137     
+   1783.38338613137     
+   1783.38338613287     
+   1783.38338613287     
+  0.000000000000000E+000
+  0.000000000000000E+000
+          -1          -1          -1
+obdef
+loc3d
+    0.6970532057908829        0.2732569021351064         160000.0000000000      3
+kind
+          39
+ 84601     153130
+   29877233.3253669     

@@ -1,0 +1,2934 @@
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 50 42
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 50 43
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 52  2
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 52  3
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 53 25
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 53 26
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 54 41
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 54 42
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 56  0
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 56  1
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 57 21
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 57 22
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 58 42
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 16 58 43
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  0  2
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  0  3
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  1 25
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  1 26
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  2 43
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  2 44
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  4  1
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  4  1
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  5 21
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  5 22
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  6 41
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  6 42
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  7 59
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  8  0
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  9 21
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17  9 22
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 10 39
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 10 40
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 11 58
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 11 59
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 13 17
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 13 18
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 14 37
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 14 38
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 15 55
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 15 56
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 17 15
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 17 16
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 18 37
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 18 39
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 19 59
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 20  1
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 21 21
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 12 17 21 22
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 16 16  7 29
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 16 16  7 30
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 16 16  9  0
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 16 16  9  1
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 16 16 10 36
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 16 16 10 37
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 16 16 12  2
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: initalizing f10_7 as   70.00000
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 16 16 12  4
+ Program Filter
+ --------------------------------------
+ 
+ ERROR FROM:
+  source : netcdf_utilities_mod.f90
+  routine: read_transpose opening
+  message: null: No such file or directory
+  message: ...
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 14 35  2
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: reading f10_7 estimate from netcdf file
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 14 35  3
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 14 36 30
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: reading f10_7 estimate from netcdf file
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 14 36 30
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 14 37 59
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: reading f10_7 estimate from netcdf file
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 14 37 59
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 14 39 32
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: reading f10_7 estimate from netcdf file
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: None
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 14 39 33
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 15  9 35
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: reading f10_7 estimate from netcdf file
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: deterministic, deflation permitted, time-constant, spati
+ ally-varying, state-space
+ PE 0: Prior inflation: inf mean   from namelist, value:    0.900
+ PE 0: Prior inflation: inf stddev from namelist, value:    0.000
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 15  9 36
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 15 11 15
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: reading f10_7 estimate from netcdf file
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: deterministic, deflation permitted, time-constant, spati
+ ally-varying, state-space
+ PE 0: Prior inflation: inf mean   from namelist, value:    0.900
+ PE 0: Prior inflation: inf stddev from namelist, value:    0.000
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 15 11 16
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 15 12 48
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: reading f10_7 estimate from netcdf file
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: deterministic, deflation permitted, time-constant, spati
+ ally-varying, state-space
+ PE 0: Prior inflation: inf mean   from namelist, value:    0.900
+ PE 0: Prior inflation: inf stddev from namelist, value:    0.000
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 15 12 49
+ Program Filter
+ --------------------------------------
+ 
+ 
+ --------------------------------------
+ Starting ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 15 14 40
+ Program Filter
+ --------------------------------------
+ 
+  set_nml_output Echo NML values to log file only
+ PE 0: initialize_mpi_utilities:  Running with           32  MPI processes.
+ 
+ Registering module : "tiegcm/model_mod.f90" ... complete.
+ static_init_model: debug level is            1
+ PE 0: read_TIEGCM_namelist: reading namelist [tiegcm.nml]
+ PE 0: read_TIEGCM_definition: reading restart [tiegcm_restart_p.nc]
+ PE 0: reading f10_7 estimate from netcdf file
+ 
+ Assimilate_these_obs_types:
+    CHAMP_DENSITY
+    GPS_VTEC_EXTRAP
+    GPS_PROFILE
+    COSMIC_ELECTRON_DENSITY
+ Evaluate_these_obs_types:
+    GND_GPS_VTEC
+ Use the precomputed Prior Forward Operators for these obs types:
+    none
+ 
+ PE 0: quality_control_mod: Will reject obs with Data QC larger than    3
+ PE 0: quality_control_mod: No observation outlier threshold rejection will be d
+ one
+ PE 0: location_mod: using code with optimized cutoffs
+ PE 0: location_mod: Ignoring vertical separation when computing distances; hori
+ zontal distances only
+ PE 0: assim_tools_init: Selected filter type is Ensemble Adjustment Kalman Filt
+ er (EAKF)
+ PE 0: assim_tools_init: The cutoff namelist value is           0.200000
+ PE 0: assim_tools_init: ... cutoff is the localization half-width parameter,
+ PE 0: assim_tools_init: ... so the effective localization radius is           0
+ .400000
+ PE 0: assim_tools_init: Replicating a copy of the ensemble mean on every task
+ PE 0: assim_tools_init: ... uses more memory per task but may run faster if doi
+ ng vertical
+ PE 0: assim_tools_init: ... coordinate conversion; controlled by namelist item 
+ "distribute_mean"
+ PE 0: assim_tools_init: Not doing vertical localization, no vertical coordinate
+  conversion required
+ PE 0: filter_main: running with an ensemble size of     5
+ PE 0: parse_stages_to_write:  filter will write stage : output
+ 
+ Registering module : "DEFAULT_obs_def_mod.F90" ... complete.
+ PE 0: filter_main: running with distributed state; model states stay distribute
+ d across all tasks for the entire run
+ PE 0: Prior inflation: deterministic, deflation permitted, time-constant, spati
+ ally-varying, state-space
+ PE 0: Prior inflation: inf mean   from namelist, value:    0.900
+ PE 0: Prior inflation: inf stddev from namelist, value:    0.000
+ PE 0: Posterior inflation: None
+ PE 0: filter_main: Reading in initial condition/restart data for all ensemble m
+ embers from file(s)
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    0
+ PE 0: move_ahead Next assimilation window starts    at:  day=  153130 sec= 8460
+ 1
+ PE 0: move_ahead Next assimilation window ends      at:  day=  153131 sec=  180
+ 0
+ PE 0: filter: Model does not need to run; data already at required time
+ PE 0: filter: Ready to assimilate up to       1 observations
+ PE 0: comp_cov_factor: Standard Gaspari Cohn localization selected
+ PE 0: filter_assim: Processed       1 total observations
+ PE 0:
+ PE 0: filter: Main assimilation loop, starting iteration    1
+ PE 0: filter: No more obs to assimilate, exiting main loop
+ PE 0: filter: End of main filter assimilation loop, starting cleanup
+ PE 0: write_obs_seq  opening formatted observation sequence file "obs_seq.final
+ "
+ PE 0: write_obs_seq  closed observation sequence file "obs_seq.final"
+ FINISHED filter.
+ 
+ 
+ --------------------------------------
+ Finished ... at YYYY MM DD HH MM SS = 
+                 2022  3 17 15 14 41
+ Program Filter
+ --------------------------------------
+ 

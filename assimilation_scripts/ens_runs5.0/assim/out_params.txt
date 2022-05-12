@@ -1,0 +1,5 @@
+../mem01/out_params.nc
+../mem02/out_params.nc
+../mem03/out_params.nc
+../mem04/out_params.nc
+../mem05/out_params.nc

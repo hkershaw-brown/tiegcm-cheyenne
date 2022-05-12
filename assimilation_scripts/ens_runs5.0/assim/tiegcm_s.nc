@@ -1,0 +1,1 @@
+../mem01/tiegcm2.0_res5.0_mareqx_smin_sech_001.nc
